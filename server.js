@@ -6,7 +6,7 @@ const methodOverride = require('method-override');
 const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
-const Product = require('./models/productSchema')
+const Product = require('./models/productSchema.js')
 
 //requires dotenv configuration
 require('dotenv').config()
@@ -62,14 +62,16 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // Index
 //___________________
-app.get('/', (req, res) => {
-    res.render('index.ejs', {
-        product: product
+app.get('/product', (req, res) => {
+    Product.find({}, (err, allProducts) => {
+        res.render('index.ejs', {
+            product: allProducts
+        })
     })
 })
 
 //___________________
-// New
+// Create / New
 //___________________
 app.get('/product/new', (req,res) => {
     res.render('new.ejs')
@@ -77,11 +79,14 @@ app.get('/product/new', (req,res) => {
 //___________________
 // Post New
 //___________________
-app.post('/', (req, res) => {
-    res.send(req.body, (err, newProduct) => {
-        console.log(err)
-        console.log(newProduct)
-        res.redirect('/')
+app.post('/product', (req, res) => {
+    Product.create(req.body, (err, newProduct) => {
+        if (err) {
+            console.log(err)
+        }else {
+            console.log(newProduct)
+        }
+        res.redirect('/product')
     })
 })
 //___________________
@@ -90,12 +95,13 @@ app.post('/', (req, res) => {
 app.get('/product/:id', (req, res) => {
     res.render('show.ejs')
 })
-//___________________
-// Edit
-//___________________
-app.get('/:id/edit', (req, res) => {
 
-})
+// //___________________
+// // Edit
+// //___________________
+// app.get('/:id/edit', (req, res) => {
+
+// })
 
 //___________________
 //Listener

@@ -7,6 +7,12 @@
 </head>
 <body>
     <h1>Home</h1>
+    <% for (let i = 0; i < product.length; i++) { %>
+    <p>
+        <%= product[i].name %>
+        <%= product[i].price %>
+    </p>
+    <% } %>
     <a href = "/product/new">Create New Product</a>
 </body>
 </html>
