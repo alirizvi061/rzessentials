@@ -93,7 +93,16 @@ app.post('/product', (req, res) => {
 // Show
 //___________________
 app.get('/product/:id', (req, res) => {
-    res.render('show.ejs')
+    Product.findById(req.params.id, (err, showProduct) => {
+        if(err){
+            console.log(err)
+        }else{
+            console.log(showProduct)
+        }
+        res.render('show.ejs', {
+            product: showProduct
+        })
+    })
 })
 
 // //___________________
