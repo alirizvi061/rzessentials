@@ -6,6 +6,8 @@ const methodOverride = require('method-override');
 const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
+const Product = require('./models/productSchema')
+
 //requires dotenv configuration
 require('dotenv').config()
 //___________________
@@ -49,9 +51,6 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
-
-
-
 //___________________
 // Routes
 //___________________
@@ -60,8 +59,42 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //     res.send('Hello World!');
 // });
 
+//___________________
+// Index
+//___________________
 app.get('/', (req, res) => {
-    res.render('index.ejs')
+    res.render('index.ejs', {
+        product: product
+    })
+})
+
+//___________________
+// New
+//___________________
+app.get('/product/new', (req,res) => {
+    res.render('new.ejs')
+})
+//___________________
+// Post New
+//___________________
+app.post('/', (req, res) => {
+    res.send(req.body, (err, newProduct) => {
+        console.log(err)
+        console.log(newProduct)
+        res.redirect('/')
+    })
+})
+//___________________
+// Show
+//___________________
+app.get('/product/:id', (req, res) => {
+    res.render('show.ejs')
+})
+//___________________
+// Edit
+//___________________
+app.get('/:id/edit', (req, res) => {
+
 })
 
 //___________________
