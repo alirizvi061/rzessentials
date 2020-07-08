@@ -93,23 +93,23 @@ app.post('/product', (req, res) => {
 // //___________________
 // // Edit
 // //___________________
-app.get('/:id/edit', (req, res) => {
+app.get('/product/:id/edit', (req, res) => {
     Product.findById(req.params.id, (err, editProduct) => {
         if(err){
             console.log(err)
-        }else{
-            console.log(editProduct)
         }
+        console.log(editProduct)
         res.render('edit.ejs', {
             product: editProduct
         })
+        
     })
 })
 
 //___________________
 //EDIT PUT
 //___________________
-app.put('/:id', (req, res) => {
+app.put('/product/:id', (req, res) => {
     Product.updateOne({_id: req.params.id}, {$set: req.body}, (err, editProduct) => {
         res.redirect('/product/' + req.params.id)
     })
