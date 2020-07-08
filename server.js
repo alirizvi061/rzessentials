@@ -89,6 +89,32 @@ app.post('/product', (req, res) => {
         res.redirect('/product')
     })
 })
+
+// //___________________
+// // Edit
+// //___________________
+app.get('/:id/edit', (req, res) => {
+    Product.findById(req.params.id, (err, editProduct) => {
+        if(err){
+            console.log(err)
+        }else{
+            console.log(editProduct)
+        }
+        res.render('edit.ejs', {
+            product: editProduct
+        })
+    })
+})
+
+//___________________
+//EDIT PUT
+//___________________
+app.put('/:id', (req, res) => {
+    Product.updateOne({_id: req.params.id}, {$set: req.body}, (err, editProduct) => {
+        res.redirect('/product/' + req.params.id)
+    })
+})
+
 //___________________
 // Show
 //___________________
@@ -104,13 +130,6 @@ app.get('/product/:id', (req, res) => {
         })
     })
 })
-
-// //___________________
-// // Edit
-// //___________________
-// app.get('/:id/edit', (req, res) => {
-
-// })
 
 //___________________
 //Listener

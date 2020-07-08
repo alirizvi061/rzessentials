@@ -8,8 +8,10 @@
 <body>
     <h1>Product Page</h1>
     <p>
-        <%= product.name %>
-        <%= product.price %>
+        <%= product.name %><br>
+        <%= product.price %><br>
+        <img class = 'showImage' src = "<%= product.image %>"/><br>
+        <a href = '/product/<%= product.id %>/edit'>Edit Product</a>
     </p>
     <a href='/product'>Back</a>
 </body>

@@ -6,6 +6,13 @@
     <title>Edit Product</title>
 </head>
 <body>
-    <h1>Edit Page</h1>
+    <h1>Edit Product</h1>
+    <form action = "/product/<%= product.id %>?_method=PUT" method = "POST">
+        <input type = 'text' placeholder = 'Product Name' name = "name">
+        <input type = 'text' placeholder = 'Price' name="price">
+        <input type = 'text' placeholder = 'URL' name="image">
+        <input type = 'submit' name = 'Submit'>
+    </form>
+    <a href='/product'>Back</a>
 </body>
 </html>
