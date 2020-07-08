@@ -7,6 +7,7 @@ const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
 const Product = require('./models/productSchema.js')
+const User = require('./models/userSchema.js')
 
 //requires dotenv configuration
 require('dotenv').config()
@@ -129,7 +130,8 @@ app.get('/product/:id', (req, res) => {
             product: showProduct
         })
     })
-})
+});
+
 //___________________
 //Delete
 //___________________
