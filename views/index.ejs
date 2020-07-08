@@ -19,6 +19,9 @@
         <%= product[i].price %>
     </p>
     <img class = 'inImage' src = "<%= product[i].image %>"/><br>
+    <form action = '/product/<%= product[i].id %>?_method=DELETE' method='POST'>
+        <input type = 'submit' value = "Delete"/> 
+    </form>
     <% } %>
     <a href = "/product/new">Create New Product</a>
 </body>
