@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <%- include ('./partials/header.ejs') %>
+    <%- include ('./partials/menu.ejs') %>
+
     <title>Product</title>
 </head>
 <body>
@@ -11,7 +13,7 @@
             <img class = 'showImage' src = "<%= product.image %>"/>
         </div><br>
     <div class = 'showTextContainer'>
-        <p class = 'showText'></p>
+        <p class = 'showText productName'></p>
         
         Name: <%= product.name %>
         

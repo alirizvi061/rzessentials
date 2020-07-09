@@ -19,7 +19,6 @@ body {
     display: inline-block;
     /* border: 1px solid black; */
     border-radius: 15px 15px;
-    padding: 5px;
     box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
     /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 }
@@ -112,6 +111,10 @@ body {
     flex-direction: column;
 }
 
+.productName {
+    color: white;
+    text-decoration: none;
+}
 /* Partials styling */
 
 .sideNav {
@@ -121,8 +124,7 @@ body {
     left: 0;
     overflow-x: hidden;
     display: flex;
-    position: absolute;
-    justify-content: center;
+    position: fixed;
     flex-direction: column;
     width: 0px;
     height: 100%;
@@ -144,11 +146,15 @@ body {
 
 .navCloseButton {
     position: relative;
+    top: 0;
     left: 100px;
     font-size: 50px;
 }
-/* .menuIcon {
+.menuIcon {
+    margin: 5% 4%;
+    font-size: 20px;
+    color: black;
     position: fixed;
     top: 0;
     left: 0;
-} */
+}

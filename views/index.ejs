@@ -14,7 +14,7 @@
     <div class = 'itemPlus'>
         <p>
             Name:
-            <a href = '/product/<%= product[i].id %>'>
+            <a class = 'productName' href = '/product/<%= product[i].id %>'>
                 <%= product[i].name %>
             </a>
         <p>
@@ -35,9 +35,6 @@
     </div>
         <% } %>
     </div>
-    <footer>
-        <a href = "/product/new" class = 'createButton'>Create New Product</a>
-    </footer>
 </div>
 </body>
 </html>
