@@ -142,6 +142,21 @@ app.delete('/product/:id', (req, res) => {
 });
 
 //___________________
+//BUY
+//___________________
+app.put('/product/update/:id', (req, res) => {
+    // res.send('Product bought!')
+    Product.findByIdAndUpdate(req.params.id, {$inc: {quantity: -1}}, (err, buyProduct) => {
+        if(err){
+            console.log(err)
+        }else{
+            console.log(buyProduct)
+        }
+        res.redirect('/product/' + req.params.id)
+    })
+})
+
+//___________________
 //Listener
 //___________________
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));

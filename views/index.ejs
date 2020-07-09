@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;1,200&display=swap');
-    </style>
-    <link rel = "stylesheet" href = "/style.css"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include ('./partials/header.ejs') %>
     <title>Home</title>
 </head>
 <body>
     <div class = 'container'>
-    <h1>Home</h1>
+    <h1 class = 'headerText'>Home</h1>
 
     <div class = 'item'>
         <% for (let i = 0; i < product.length; i++) { %>
@@ -32,6 +27,9 @@
         </div>
         <form action = '/product/<%= product[i].id %>?_method=DELETE' method='POST'>
             <input type = 'submit' value = "Delete"/> 
+        </form>
+        <form action = '/product/update/<%= product[i].id %>?_method=PUT' method="POST">
+            <input type = 'submit' value = "buy">
         </form>
     </div>
         <% } %>

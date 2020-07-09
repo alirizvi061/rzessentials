@@ -2,29 +2,24 @@
 <html lang="en">
 <head>
     <head>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;1,200&display=swap');
-        </style>
-        <link rel = "stylesheet" href = "/style.css"/>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%- include ('./partials/header.ejs') %>
         <title>New Product</title>
     </head>
 </head>
 <body>
-    <h1>Edit Product</h1>
+    <h1 class = 'headerText'>Edit Product</h1>
     <div class = 'newContainer'>
         <form action = "/product/<%= product.id %>?_method=PUT" method = "POST">
             <label class = 'label'>Product Name:</label><br>
-            <input type = 'text'  name = "name" class = 'inputBox'><br>
+            <input type = 'text'  name = "name" class = 'inputBox' value="<%= product.name %>"><br>
             <label class = 'label'>Product Description:</label><br>
-            <textarea name = "description" class = 'inputBox textBox'></textarea><br>
+            <textarea name = "description" class = 'inputBox textBox' value="<%= product.description %>"></textarea><br>
             <label class = 'label'>Price:</label><br>
-            <input type = 'text'  name="price" class = 'inputBox'><br>
+            <input type = 'text'  name="price" class = 'inputBox' value="<%= product.price %>"><br>
             <label class = 'label'>Image Url:</label><br>
-            <input type = 'text'  name="image" class = 'inputBox'><br>
+            <input type = 'text'  name="image" class = 'inputBox' value="<%= product.image %>"><br>
             <label class = 'label'>Product Quantity:</label><br>
-            <input type = 'text'  name = "quantity" class = 'inputBox'><br>
+            <input type = 'text'  name = "quantity" class = 'inputBox' value="<%= product.quantity %>"><br>
             <input type = 'submit' name = 'Submit'>
         </form>
     </div>

@@ -2,15 +2,36 @@ body {
     background-color: #F5E2E2;
     text-align: center;
     font-family: 'Fira Sans', sans-serif;
+    color: white;
 }
 
-.inImage, .showImage {
+.headerText {
+    color: black;
+    margin: 5%
+}
+
+
+.inImage {
     max-width: 90%;
     max-height: 90%;
     display: block;
     text-align: center;
     display: inline-block;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border-radius: 15px 15px;
+    padding: 5px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
+    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+}
+
+.showImage {
+    margin: 50% 2%;
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    text-align: center;
+    display: inline-block;
+    /* border: 1px solid black; */
     border-radius: 15px 15px;
     padding: 5px;
     box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
@@ -25,7 +46,7 @@ body {
 
 .itemPlus {
     margin: 7% 3% 3%;
-    background-color: rgba(20, 114, 255, 0.815);
+    background-color:#394A55;
     display: inline-grid; 
     border: 1px solid black;
     border-radius: 15px 15px;
@@ -41,7 +62,7 @@ body {
 }
 
 .newContainer{
-    background-color: rgba(20, 114, 255, 0.815);
+    background-color: #394A55;
     display: inline-grid; 
     border: 1px solid black;
     border-radius: 15px 15px;
@@ -64,4 +85,29 @@ body {
 .textBox {
     resize: none;
     padding: 25px;
+}
+
+.showContainer {
+    margin: 7%;
+    overflow-wrap: break-word;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(20, 114, 255, 0.815);
+    border-radius: 15px 15px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
+    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+} 
+
+.showTextContainer { 
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.allShowButtons {
+    display: flex;
+    flex-direction: column;
 }
