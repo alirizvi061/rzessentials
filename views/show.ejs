@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;1,200&display=swap');
+    </style>
     <link rel = "stylesheet" type = 'text/css' href = "/style.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +29,8 @@
     <form action = '/product/<%= product.id %>?_method=DELETE' method='POST'>
         <input type = 'submit' value = "Delete"/> 
     </form>
-    <a href='/product'>Back</a>
+    <button class = 'backButton'>
+        <a href='/product' >Back</a>
+    </button>
 </body>
 </html>

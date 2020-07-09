@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;1,200&display=swap');
+        </style>
         <link rel = "stylesheet" href = "/style.css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>New Product</title>
     </head>
 <body>
-    <h1>New Product</h1>
+    <h1 class = 'newProductH1'>New Product</h1>
+    <div class = 'newContainer'>
     <form action = "/product" method = "POST">
-        <label>Product Name:</label>
-        <input type = 'text' placeholder = 'Product Name' name = "name"><br>
-        <label>Product Description:</label>
-        <textarea name = "description"></textarea><br>
-        <label>Price:</label>
-        <input type = 'text' placeholder = 'Price' name="price"><br>
-        <label>Image Url:</label>
-        <input type = 'text' placeholder = 'URL' name="image"><br>
-        <label>Product Quantity:</label>
-        <input type = 'text' placeholder = 'Quantity' name = "quantity"><br>
+        <label class = 'label'>Product Name:</label><br>
+        <input type = 'text'  name = "name" class = 'inputBox'><br>
+        <label class = 'label'>Product Description:</label><br>
+        <textarea name = "description" class = 'inputBox textBox'></textarea><br>
+        <label class = 'label'>Price:</label><br>
+        <input type = 'text'  name="price" class = 'inputBox'><br>
+        <label class = 'label'>Image Url:</label><br>
+        <input type = 'text'  name="image" class = 'inputBox'><br>
+        <label class = 'label'>Product Quantity:</label><br>
+        <input type = 'text'  name = "quantity" class = 'inputBox'><br>
         <input type = 'submit' name = 'Submit'>
     </form>
-    <a href='/product'>Back</a>
+</div>
+<footer>
+    <button class = 'backButton'>
+        <a href='/product' >Back</a>
+    </button>
+</footer>
 </body>
 </html>

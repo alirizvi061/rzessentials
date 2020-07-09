@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;1,200&display=swap');
+    </style>
     <link rel = "stylesheet" href = "/style.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +15,12 @@
 
     <div class = 'item'>
         <% for (let i = 0; i < product.length; i++) { %>
+    <div class = 'itemPlus'>
         <p>
             Name:
             <a href = '/product/<%= product[i].id %>'>
                 <%= product[i].name %>
             </a>
-        </p>
         <p>
             Price: $<%= product[i].price %>
         </p>
@@ -30,9 +33,12 @@
         <form action = '/product/<%= product[i].id %>?_method=DELETE' method='POST'>
             <input type = 'submit' value = "Delete"/> 
         </form>
+    </div>
         <% } %>
     </div>
-    <a href = "/product/new">Create New Product</a>
+    <footer>
+        <a href = "/product/new" class = 'createButton'>Create New Product</a>
+    </footer>
 </div>
 </body>
 </html>
