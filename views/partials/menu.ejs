@@ -1,0 +1,33 @@
+
+<div id='mainSideNav' class = 'sideNav'>
+    <a onclick='navClose()' class = 'navCloseButton'>&times;</a>
+    <p>
+        <a class = 'navText' href=" ">About</a>
+    </p><br>
+    <p>
+        <a class = 'navText' href=" ">Home</a>
+    </p><br>
+    <p>
+        <a class = 'navText' href=" ">Create Item</a>
+    </p><br>
+</div>
+<script>
+
+const navOpen = () => {
+    document.getElementById("mainSideNav").style.width = "250px"; 
+    document.getElementById("mainSideNav").style.display = 'navText'; 
+    console.log('function ran')
+} 
+const navClose = () => {
+    document.getElementById("mainSideNav").style.width = "0px"; 
+    console.log('Close function ran')
+} 
+</script>
+
+<span class ="menuIcon" onclick='navOpen()'>&#9776</span>
+
+
+
+<!-- Nav Concept taken from https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+
+
