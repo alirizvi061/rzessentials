@@ -7,7 +7,9 @@
     <title>Home</title>
 </head>
 <body>
+    <div class = 'container'>
     <h1>Home</h1>
+
     <div class = 'item'>
         <% for (let i = 0; i < product.length; i++) { %>
         <p>
@@ -19,6 +21,9 @@
         <p>
             Price: $<%= product[i].price %>
         </p>
+        <p>
+            Quantity: <%= product[i].quantity %>
+        </p>
         <div class="box">
             <img class = 'inImage' src = "<%= product[i].image %>"/><br>
         </div>
@@ -28,6 +33,7 @@
         <% } %>
     </div>
     <a href = "/product/new">Create New Product</a>
+</div>
 </body>
 </html>
 
