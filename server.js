@@ -8,6 +8,7 @@ const app = express();
 const db = mongoose.connection;
 const Product = require('./models/productSchema.js')
 const User = require('./models/userSchema.js')
+const defaultImage = 'https://pflugerville-vortexsportscenter.com/wp-content/uploads/2017/04/default-image-800x600.jpg';
 
 //requires dotenv configuration
 require('dotenv').config()
@@ -66,7 +67,8 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 app.get('/product', (req, res) => {
     Product.find({}, (err, allProducts) => {
         res.render('index.ejs', {
-            product: allProducts
+            product: allProducts,
+            defaultImage,
         })
     })
 })

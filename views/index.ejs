@@ -25,7 +25,11 @@
             Quantity: <%= product[i].quantity %>
         </p>
         <div class="box">
-            <img class = 'inImage' src = "<%= product[i].image %>"/><br>
+            <% if (product[i].image) { %> 
+                <img class = 'inImage' src = "<%= product[i].image %>"/><br>
+            <% } else { %> 
+                <img class = 'inImage' src = "<%= defaultImage %>"/><br>
+                <% } %>
         </div>
         <form action = '/product/<%= product[i].id %>?_method=DELETE' method='POST'>
             <input type = 'submit' value = "Delete"/> 
