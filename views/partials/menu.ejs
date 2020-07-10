@@ -10,6 +10,19 @@
     <p>
         <a href = "/product/new" class = 'navText' href=" ">Create Item</a>
     </p><br>
+    <% if (currentUser) { %> 
+        <form action="/sessions/delete?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out" class="btn-small red" />
+          </form>
+    <% }else { %>
+        <p>
+            <a href='/users/new' class = 'navText' href=" ">Sign Up</a>
+        </p><br>
+        <p>
+            <a href='/sessions/new' class = 'navText' href=" ">Log In</a>
+        </p><br>
+    <% } %>
+    
 </div>
 <script>
 

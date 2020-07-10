@@ -1,9 +1,12 @@
 const mongoose = require ('mongoose');
 
 const userSchema = new mongoose.Schema ({
-    name: String,
+    username: { type: String, unique: true},
     password: String,
     email: String,
+    cart: {
+        type: Array,
+    }
 }, {
     timestamps: true,
 });

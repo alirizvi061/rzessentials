@@ -11,7 +11,6 @@ const session = require('express-session')
 const db = mongoose.connection;
 const Product = require('./models/productSchema.js')
 const User = require('./models/userSchema.js')
-const defaultImage = 'https://pflugerville-vortexsportscenter.com/wp-content/uploads/2017/04/default-image-800x600.jpg';
 
 //___________________
 //Port
@@ -65,120 +64,18 @@ app.use(
 //___________________
 // Controller
 //___________________
-const userController = require('./controller/user.js');
+const userController = require('./controllers/user.js');
 app.use('/users', userController);
 
-//___________________
-// Routes
-//___________________
-// localhost:3000
-// app.get('/' , (req, res) => {
-//     res.send('Hello World!');
-// });
+const sessionsController = require('./controllers/sessions.js')
+app.use('/sessions', sessionsController)
 
-//login
-app.get('/any', (req, res) => {
-    //any route will work
-    req.session.anyProperty = 'any value'
-  })
+const productRouter = require('./controllers/product.js')
+app.use('/product', productRouter)
 
-//___________________
-// Index
-//___________________
-app.get('/product', (req, res) => {
-    Product.find({}, (err, allProducts) => {
-        res.render('index.ejs', {
-            product: allProducts,
-            defaultImage,
-        })
-    })
-})
-
-//___________________
-// Create / New
-//___________________
-app.get('/product/new', (req,res) => {
-    res.render('new.ejs')
+app.get('/', (req, res) => {
+    res.render('about.ejs')
 });
-
-//___________________
-// Post New
-//___________________
-app.post('/product', (req, res) => {
-    Product.create(req.body, (err, newProduct) => {
-        if (err) {
-            console.log(err)
-        }else {
-            console.log(newProduct)
-        }
-        res.redirect('/product')
-    })
-});
-
-// //___________________
-// // Edit
-// //___________________
-app.get('/product/:id/edit', (req, res) => {
-    Product.findById(req.params.id, (err, editProduct) => {
-        if(err){
-            console.log(err)
-        }
-        console.log(editProduct)
-        res.render('edit.ejs', {
-            product: editProduct
-        })
-        
-    })
-})
-
-//___________________
-//EDIT PUT
-//___________________
-app.put('/product/:id', (req, res) => {
-    Product.updateOne({_id: req.params.id}, {$set: req.body}, (err, editProduct) => {
-        res.redirect('/product/' + req.params.id)
-    })
-})
-
-//___________________
-// Show
-//___________________
-app.get('/product/:id', (req, res) => {
-    Product.findById(req.params.id, (err, showProduct) => {
-        if(err){
-            console.log(err)
-        }else{
-            console.log(showProduct)
-        }
-        res.render('show.ejs', {
-            product: showProduct,
-        })
-    })
-});
-
-//___________________
-//Delete
-//___________________
-app.delete('/product/:id', (req, res) => {
-    Product.findByIdAndRemove(req.params.id, (err, deleteProduct) => {
-        res.redirect('/product')
-    })
-});
-
-//___________________
-//BUY
-//___________________
-app.put('/product/update/:id', (req, res) => {
-    // res.send('Product bought!')
-    Product.findByIdAndUpdate(req.params.id, {$inc: {quantity: -1}}, (err, buyProduct) => {
-        if(err){
-            console.log(err)
-        }else{
-            console.log(buyProduct)
-        }
-        res.redirect('/product')
-    })
-})
 
 //___________________
 //Listener
