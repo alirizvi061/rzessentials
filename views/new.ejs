@@ -5,6 +5,7 @@
         <title>New Product</title>
     </head>
 <body>
+    <main>
     <h1 class = 'headerText'>New Product</h1>
     <div class = 'newContainer'>
     <form action = "/product" method = "POST">
@@ -21,10 +22,14 @@
         <input type = 'submit' name = 'Submit'>
     </form>
 </div>
+</main>
 <footer>
     <button class = 'backButton'>
         <a href='/product' >Back</a>
     </button>
+    <footer>
+        <%- include ('./partials/footer.ejs') %>
+    </footer>
 </footer>
 </body>
 </html>

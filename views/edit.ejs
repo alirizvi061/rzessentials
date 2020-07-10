@@ -7,6 +7,7 @@
     </head>
 </head>
 <body>
+    <main>
     <h1 class = 'headerText'>Edit Product</h1>
     <div class = 'newContainer'>
         <form action = "/product/<%= product.id %>?_method=PUT" method = "POST">
@@ -23,10 +24,12 @@
             <input type = 'submit' name = 'Submit'>
         </form>
     </div>
-    <footer>
+    <div>
         <button class = 'backButton'>
             <a href='/product' >Back</a>
         </button>
-    </footer>
+    </div>
+    </main>
+        <%- include ('./partials/footer.ejs') %>
 </body>
 </html>

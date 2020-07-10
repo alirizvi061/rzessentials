@@ -5,6 +5,9 @@ body {
     color: white;
 }
 
+main {
+    margin: 5%;
+}
 .headerText {
     color: black;
     margin: 5%
@@ -157,4 +160,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+.footer {
+    display: block;
+    position: absolute;
 }
