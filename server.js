@@ -5,13 +5,14 @@ const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require ('mongoose');
 const app = express();
+//requires dotenv configuration
+require('dotenv').config()
+const session = require('express-session')
 const db = mongoose.connection;
 const Product = require('./models/productSchema.js')
 const User = require('./models/userSchema.js')
 const defaultImage = 'https://pflugerville-vortexsportscenter.com/wp-content/uploads/2017/04/default-image-800x600.jpg';
 
-//requires dotenv configuration
-require('dotenv').config()
 //___________________
 //Port
 //___________________
@@ -52,6 +53,20 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
+//used for login information setup
+app.use(
+    session({
+      secret: process.env.SECRET, 
+      resave: false, 
+      saveUninitialized: false 
+    })
+)
+
+//___________________
+// Controller
+//___________________
+const userController = require('./controller/user.js');
+app.use('/users', userController);
 
 //___________________
 // Routes
@@ -60,6 +75,12 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // app.get('/' , (req, res) => {
 //     res.send('Hello World!');
 // });
+
+//login
+app.get('/any', (req, res) => {
+    //any route will work
+    req.session.anyProperty = 'any value'
+  })
 
 //___________________
 // Index
@@ -78,7 +99,8 @@ app.get('/product', (req, res) => {
 //___________________
 app.get('/product/new', (req,res) => {
     res.render('new.ejs')
-})
+});
+
 //___________________
 // Post New
 //___________________
@@ -91,7 +113,7 @@ app.post('/product', (req, res) => {
         }
         res.redirect('/product')
     })
-})
+});
 
 // //___________________
 // // Edit
@@ -129,7 +151,7 @@ app.get('/product/:id', (req, res) => {
             console.log(showProduct)
         }
         res.render('show.ejs', {
-            product: showProduct
+            product: showProduct,
         })
     })
 });
@@ -154,7 +176,7 @@ app.put('/product/update/:id', (req, res) => {
         }else{
             console.log(buyProduct)
         }
-        res.redirect('/product/' + req.params.id)
+        res.redirect('/product')
     })
 })
 
