@@ -25,7 +25,7 @@
             Quantity: <%= product[i].quantity %>
         </p>
         <div class="box">
-            <% if (product[i].image) { %> 
+            <% if (product !== []) { %> 
                 <img class = 'inImage' src = "<%= product[i].image %>"/><br>
             <% } else { %> 
                 <img class = 'inImage' src = "https://pflugerville-vortexsportscenter.com/wp-content/uploads/2017/04/default-image-800x600.jpg"/><br>
