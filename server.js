@@ -74,16 +74,12 @@ const productRouter = require('./controllers/product.js')
 app.use('/product', productRouter)
 
 
-app.get('/about', (req, res) => {
+app.get('/', (req, res) => {
     res.render('about.ejs', {
         currentUser: null,
     })
 });
-app.get('/', (req, res) => {
-    res.render('index.ejs', {
-        currentUser: null,
-    })
-});
+
 
 //___________________
 //Listener
