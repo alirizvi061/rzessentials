@@ -12,7 +12,6 @@ productRouter.get('/', (req, res) => {
         res.render('index.ejs', {
             currentUser: req.session.currentUser,
             product: allProducts,
-            defaultImage,
         })
     })
 })
