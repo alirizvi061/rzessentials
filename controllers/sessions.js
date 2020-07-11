@@ -37,7 +37,7 @@ sessions.get('/new', (req, res) => {
   sessions.delete('/delete', (req, res) => {
       console.log('HI')
     req.session.destroy(() => {
-      res.redirect('/product')
+      res.redirect('/')
     })
   })
 
