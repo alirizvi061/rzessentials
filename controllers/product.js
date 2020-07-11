@@ -106,4 +106,6 @@ productRouter.put('/update/:id', (req, res) => {
     })
 })
 
+
+
 module.exports = productRouter;
