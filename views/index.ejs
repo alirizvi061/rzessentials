@@ -28,7 +28,7 @@
             <% if (product[i].image) { %> 
                 <img class = 'inImage' src = "<%= product[i].image %>"/><br>
             <% } else { %> 
-                <img class = 'inImage' src = "<%= defaultImage %>"/><br>
+                <img class = 'inImage' src = "https://pflugerville-vortexsportscenter.com/wp-content/uploads/2017/04/default-image-800x600.jpg"/><br>
                 <% } %>
         </div>
         <form action = '/product/<%= product[i].id %>?_method=DELETE' method='POST'>

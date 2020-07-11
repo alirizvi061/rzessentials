@@ -2,7 +2,7 @@ const express = require('express');
 const productRouter = express.Router();
 const bcrypt = require('bcrypt');
 const Product = require('../models/productSchema.js')
-const defaultImage = 'https://pflugerville-vortexsportscenter.com/wp-content/uploads/2017/04/default-image-800x600.jpg';
+
 
 //___________________
 // Index
