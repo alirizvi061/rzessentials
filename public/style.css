@@ -231,12 +231,24 @@ main {
 
 .logInLogo {
     position: fixed;
-    left: 5%;
-    top: 6%;
+    left: 6%;
+    top: 8.5%;
     /* margin: 6% 6% 0% 6%; */
-    max-width: 9%;
+    width: 105px;
+    height: 105px;
     /* max-height: 10%; */
     /* text-align: center; */
     display: inline-block;
     border-radius: 10px 10px;
+}
+
+.showButtons {
+    background: white;
+    color: black; 
+    border-radius: 2px;
+}
+
+.showButtons:hover {
+    color: blue;
+    text-decoration: underline;
 }

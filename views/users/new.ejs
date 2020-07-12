@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <%- include('../partials/header.ejs') %>
+    <%- include('../partials/menu.ejs') %>
     <title>Sign Up</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <%- include('../partials/menu.ejs') %>
-      </nav>
-      <%- include ('../partials/head.ejs') %>
-    <div class='container'>
+    <header>
+        <img class = 'logInLogo' type = 'text/css' src = "/assets/logo_transparent.jpg" alt = "R and Z Essentials logo"/>
+    </header>
+    <div class='userContainer'>
         <h1>Sign Up</h1>
         <form action="/users" method="POST">
             <div>

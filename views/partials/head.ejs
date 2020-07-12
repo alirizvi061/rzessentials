@@ -1,1 +1,7 @@
-<img class = 'logo' type = 'text/css' src = "/assets/logo_transparent.jpg" alt = "R and Z Essentials logo"/>
+<% if (currentUser) { %>
+    <a href = '/product'>
+        <img class = 'logo' type = 'text/css' src = "/assets/logo_transparent.jpg" alt = "R and Z Essentials logo"/>
+    </a>    
+<% }else { %>
+    <img class = 'logo' type = 'text/css' src = "/assets/logo_transparent.jpg" alt = "R and Z Essentials logo"/>
+<% } %> 

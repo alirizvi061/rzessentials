@@ -36,14 +36,14 @@
         
         </p><br>
     <div class = 'allShowButtons'>
-        <p>
-            <a href = '/product/<%= product.id %>/edit'>Edit Product</a>
-        </p>
-        <form action = '/product/<%= product.id %>?_method=DELETE' method='POST'>
-            <input type = 'submit' value = "Delete"/> 
+        <button>
+            <a class = 'showButtons' href = '/product/<%= product.id %>/edit'>Edit</a>
+        </button>
+        <form  action = '/product/<%= product.id %>?_method=DELETE' method='POST'>
+            <input class = 'showButtons' type = 'submit' value = "Delete"/> 
         </form>
         <form action = '/product/update/<%= product.id %>?_method=PUT' method="POST">
-            <input type = 'submit' value = "BUY">
+            <input class = 'showButtons' type = 'submit' value = "BUY">
         </form>
     </div>
     </div>
