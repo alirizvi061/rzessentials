@@ -10,7 +10,7 @@ main {
 }
 .headerText {
     color: black;
-    margin: 5%
+    margin: 2%
 }
 
 
@@ -20,7 +20,6 @@ main {
     display: block;
     text-align: center;
     display: inline-block;
-    /* border: 1px solid black; */
     border-radius: 15px 15px;
     box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
     /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
@@ -33,7 +32,6 @@ main {
     display: block;
     text-align: center;
     display: inline-block;
-    /* border: 1px solid black; */
     border-radius: 15px 15px;
     padding: 5px;
     box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
@@ -90,28 +88,53 @@ main {
 }
 
 .showContainer {
-    margin: 7%;
+    margin: 10%;
     overflow-wrap: break-word;
     display: flex;
     justify-content: space-around;
-    background-color: rgba(20, 114, 255, 0.815);
+    background-color: #394A55;
     border-radius: 15px 15px;
     box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
     /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 } 
 
+@media only screen and (max-width: 850px) {
+    .showContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .showImage {
+        margin: 5% 2%;
+    }
+  }
+  
 .showTextContainer { 
+    width: 43%;
+    position: relative;
+    right: 10%;
     text-align: left;
-    border: 1px solid black;
-    border-radius: 15px 15px;
     display: flex;
     flex-direction: column;
     justify-content: left;
 }
 
+.userContainer{ 
+    height: 500px;
+    margin: 20% 16% 13% 17%;
+    background-color: #394A55;
+    border: 1px solid black;
+    border-radius: 15px 15px;
+    padding: 50px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
+    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+    
+}
+
 .allShowButtons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .productName {
@@ -154,8 +177,8 @@ main {
     font-size: 50px;
 }
 .menuIcon {
-    margin: 5% 4%;
-    font-size: 20px;
+    margin: 5% 3%;
+    font-size: 31px;
     color: black;
     position: fixed;
     top: 0;
@@ -171,7 +194,7 @@ main {
 
 .aboutPageModal {
     word-wrap: break-word;
-    margin: 2% 15% 15% 15%;
+    margin: 2% 14% 15% 15%;
     height: 100%;
     background: rgb(255, 166, 0);
     border-radius: 15px 15px;
@@ -181,4 +204,39 @@ main {
 }
 .aboutPageContent{
     padding: 5%;
+}
+
+.aboutPage{
+    margin: 5%;
+}
+
+/* Logo */
+
+.logo {
+    position: fixed;
+    left: 0;
+    margin: -2% 4% 1% 6%;
+    /* margin: 6% 6% 0% 6%; */
+    width: 105px;
+    height: 105px;
+    /* max-height: 10%; */
+    /* text-align: center; */
+    display: inline-block;
+    border-radius: 10px 10px;
+    /* box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);  */
+    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+}
+
+
+
+.logInLogo {
+    position: fixed;
+    left: 5%;
+    top: 6%;
+    /* margin: 6% 6% 0% 6%; */
+    max-width: 9%;
+    /* max-height: 10%; */
+    /* text-align: center; */
+    display: inline-block;
+    border-radius: 10px 10px;
 }

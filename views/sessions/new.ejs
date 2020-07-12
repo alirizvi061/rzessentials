@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <%- include('../partials/header.ejs') %>
+    <%- include('../partials/menu.ejs') %>
     <title>Log In</title>
 </head>
 <body>
-    <!-- Start of Nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <%- include('../partials/menu.ejs') %>
-      </nav>
-       <!-- End of Nav -->
-    <div class='container'>
+    <header>
+        <img class = 'logInLogo' type = 'text/css' src = "/assets/logo_transparent.jpg" alt = "R and Z Essentials logo"/>
+    </header>
+    
+    <div class='userContainer'>
         <h1>Log In</h1>
         <form action="/sessions" method="POST">
             <div>
@@ -24,8 +24,12 @@
             <input type="submit" value="Log In"/>
         </form>
     </div>
+</body>
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
-</body>
+
 </html>
+
+
+<!-- Idea for the log in page was emulated using the notes from the class -->
