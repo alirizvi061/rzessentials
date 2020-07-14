@@ -12,7 +12,12 @@
     <h1 class = 'headerText'>Product Page</h1>
     <div class = 'showContainer'>
         <div class="box">
-            <img class = 'showImage' src = "<%= product.image %>"/>
+            <% if (product.image) { %> 
+                <img class = 'showImage' src = "<%= product.image %>"/><br>
+            <% } else { %> 
+                <img class = 'showImage' src = "https://pflugerville-vortexsportscenter.com/wp-content/uploads/2017/04/default-image-800x600.jpg"/><br>
+                <% } %>
+            <!-- <img class = 'showImage' src = "<%= product.image %>"/> -->
         </div><br>
     <div class = 'showTextContainer'>
         <p class = 'showText productName'></p>
@@ -22,7 +27,7 @@
         </p><br>
         <p class = 'showText'></p>
         
-        Price: <%= product.price %>
+        Price: $<%= product.price %>
         
         </p><br>
         <p class = 'showText'></p>
