@@ -1,4 +1,4 @@
-# rzessentials
+# RZEssentials
 
 ## Overview
 
@@ -23,8 +23,17 @@ The technologies used in this project are as follow:
     9. Mongo / Mongoose
 
 ## Image
-![GitHub Logo](App 2 Main Page Wireframe)
-Format: ![Alt Text](App 2 Main Page Wireframe )
+![GitHub Logo](https://github.com/alirizvi061/rzessentials/blob/master/LogInPage.png)
+Format: ![Alt Text](Log-In-Page)
+![GitHub Logo](https://github.com/alirizvi061/rzessentials/blob/master/CartWireframe(future%20update).jpg)
+Format: ![Alt Text](Cart-Page)
+![GitHub Logo](https://github.com/alirizvi061/rzessentials/blob/master/IndexPage.jpg)
+Format: ![Alt Text](Index-Page)
+![GitHub Logo](https://github.com/alirizvi061/rzessentials/blob/master/ShowPage.jpg)
+Format: ![Alt Text](Product-Page)
+![GitHub Logo](https://github.com/alirizvi061/rzessentials/blob/master/SideNavMenu.jpg)
+Format: ![Alt Text](Side-Nav)
+
 ## Approach
 
 My approach for this project was based on creating a community store for all content creators to share their equipment as not everyone has the capital to buy all the new equipment to create beautiful and attractive content for the internet! The use creates a log in to be admitted to the community, if they want to read about what the community is, they can click the side nav to learn before even signing up to see the library. Once the user is logged in they can see the library of all the user generated products on sale. These products have descriptions, a picture, price, and a buy feature where the user can click and buy an item directly! 
