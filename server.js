@@ -75,9 +75,7 @@ app.use('/product', productRouter)
 
 
 app.get('/', (req, res) => {
-    res.render('about.ejs', {
-        currentUser: null,
-    })
+    res.redirect('/sessions/new')
 });
 
 //___________________
