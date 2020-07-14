@@ -23,7 +23,15 @@ The technologies used in this project are as follow:
     9. Mongo / Mongoose
 
 ## Image
-![RZ Logo](App Main Page Wireframe.jpg)
+![RZ Logo](https://github.com/alirizvi061/rzessentials/blob/master/Wireframes/LogInPage.png)
+Format: ![Alt Text](App 2 Main Page Wireframe )
+![RZ Logo](https://github.com/alirizvi061/rzessentials/blob/master/Wireframes/IndexPage.jpg)
+Format: ![Alt Text](App 2 Main Page Wireframe )
+![RZ Logo](https://github.com/alirizvi061/rzessentials/blob/master/Wireframes/ShowPage.jpg)
+Format: ![Alt Text](App 2 Main Page Wireframe )
+![RZ Logo](https://github.com/alirizvi061/rzessentials/blob/master/Wireframes/SideNavMenu.jpg)
+Format: ![Alt Text](App 2 Main Page Wireframe )
+![RZ Logo](https://github.com/alirizvi061/rzessentials/blob/master/Wireframes/CartWireframe(future%20update).jpg)
 Format: ![Alt Text](App 2 Main Page Wireframe )
 ## Approach
 
