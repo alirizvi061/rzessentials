@@ -1,305 +1,315 @@
 body {
-    background-color: #cccc00;
-    text-align: center;
-    font-family: 'Fira Sans', sans-serif;
-    color: white;
+  background-color: #cccc00;
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  color: white;
 }
 
 main {
-    margin: 5%;
+  margin: 5%;
 }
 .headerText {
-    color: black;
-    margin: 2%
+  color: black;
+  margin: 2%;
 }
 
-
 .inImage {
-    max-width: 90%;
-    max-height: 90%;
-    display: block;
-    text-align: center;
-    display: inline-block;
-    border-radius: 15px 15px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
-    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  text-align: center;
+  display: inline-block;
+  border-radius: 15px 15px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 }
 
 .showImage {
-    margin: 50% 2%;
-    max-width: 90%;
-    max-height: 90%;
-    display: block;
-    text-align: center;
-    display: inline-block;
-    border-radius: 15px 15px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
-    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+  margin: 50% 2%;
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  text-align: center;
+  display: inline-block;
+  border-radius: 15px 15px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 }
 .box {
-    text-align: center;
-    display: inline-block;
-    width: 250px;
+  text-align: center;
+  display: inline-block;
+  width: 250px;
 }
-
 
 .itemPlus {
-    margin: 7% 3% 3%;
-    background-color:#394A55;
-    display: inline-grid; 
-    border: 1px solid black;
-    border-radius: 15px 15px;
-    height: auto;
-    padding: 1%;
-    height: 500px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
-    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+  margin: 7% 3% 3%;
+  background-color: #394a55;
+  display: inline-grid;
+  border: 1px solid black;
+  border-radius: 15px 15px;
+  height: auto;
+  padding: 1%;
+  height: 500px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 }
 
-.label{ 
-    margin: 10px;
+.label {
+  margin: 10px;
 }
 
-.newContainer{
-    background-color: #394A55;
-    display: inline-grid; 
-    border: 1px solid black;
-    border-radius: 15px 15px;
-    padding: 50px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
-    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+.newContainer {
+  background-color: #394a55;
+  display: inline-grid;
+  border: 1px solid black;
+  border-radius: 15px 15px;
+  padding: 50px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 }
 
 .backButton {
-    position: relative;
-    top: 0; 
-    width: 90px;
-    margin: 5px;
+  position: relative;
+  top: 0;
+  width: 90px;
+  margin: 5px;
 }
 
-.newProductH1, .label, .inputBox{
-    text-align: center;
-    margin: 10px;
-    
+.newProductH1,
+.label,
+.inputBox {
+  text-align: center;
+  margin: 10px;
 }
 
 .textBox {
-    resize: none;
-    padding: 25px;
+  resize: none;
+  padding: 25px;
 }
 
 .showContainer {
-    margin: 10%;
-    overflow-wrap: break-word;
-    display: flex;
-    justify-content: space-around;
-    background-color: #394A55;
-    border-radius: 15px 15px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
-    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
-} 
-
-@media only screen and (max-width: 1000px) {
-    .showContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .showImage {
-        margin: 5% 2%;
-    }
-  }
-  
-.showTextContainer { 
-    width: 43%;
-    position: relative;
-    right: 10%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+  margin: 10%;
+  overflow-wrap: break-word;
+  display: flex;
+  justify-content: space-around;
+  background-color: #394a55;
+  border-radius: 15px 15px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 }
 
-.userContainer{ 
-    height: 300px;
-    margin: 6% 16% 13% 17%;
-    background-color: #394A55;
-    border: 1px solid black;
-    border-radius: 15px 15px;
-    padding: 50px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
-    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
-    
+@media only screen and (max-width: 1000px) {
+  .showContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .showImage {
+    margin: 5% 2%;
+  }
+}
+
+.showTextContainer {
+  width: 43%;
+  position: relative;
+  right: 10%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.userContainer {
+  height: 300px;
+  margin: 6% 16% 13% 17%;
+  background-color: #394a55;
+  border: 1px solid black;
+  border-radius: 15px 15px;
+  padding: 50px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 }
 
 .allShowButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .productName {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 /* Partials styling */
 
 .sideNav {
-    border-radius: 1px 15px 15px 1px;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    width: 0px;
-    height: 100%;
-    background-color: black;
-    transition: 0.5s;
+  border-radius: 1px 15px 15px 1px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  width: 0px;
+  height: 100%;
+  background-color: black;
+  transition: 0.5s;
 }
 
-.sideNav a{ 
-    color: gray;
-    text-decoration: none;
-    display:block;
-    transition: 0.3s;
+.sideNav a {
+  color: gray;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
 }
 
-.sideNav a:hover{
-    color: white;
+.sideNav a:hover {
+  color: white;
 }
 
 .navCloseButton {
-    position: relative;
-    top: 0;
-    left: 100px;
-    font-size: 50px;
+  position: relative;
+  top: 0;
+  left: 100px;
+  font-size: 50px;
 }
 .menuIcon {
-    margin: 5% 3%;
-    font-size: 31px;
-    color: black;
-    position: fixed;
-    top: 0;
-    left: 0;
+  margin: 5% 3%;
+  font-size: 31px;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.menuIcon, .navCloseButton:hover {
-    cursor: pointer;
+.menuIcon,
+.navCloseButton:hover {
+  cursor: pointer;
 }
 
 .footer {
-    display: block;
-    position: absolute;
+  display: block;
+  position: absolute;
 }
 
 /* About Page Css */
 
 .aboutPageModal {
-    word-wrap: break-word;
-    margin: 2% 14% 15% 15%;
-    height: 100%;
-    background: rgb(255, 166, 0);
-    border-radius: 15px 15px;
-    padding: 2%;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3); 
-    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+  word-wrap: break-word;
+  margin: 2% 14% 15% 15%;
+  height: 100%;
+  background: rgb(255, 166, 0);
+  border-radius: 15px 15px;
+  padding: 2%;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+  /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 }
-.aboutPageContent{
-    padding: 5%;
+.aboutPageContent {
+  padding: 5%;
 }
 
-.aboutPage{
-    margin: 5%;
+.aboutPage {
+  margin: 5%;
 }
 
 /* Logo */
 
 .logo {
-    /* left: 0;
+  /* left: 0;
     margin: 0% 4% 1% 6%; */
-    /* margin: 6% 6% 0% 6%; */
-    /* width: 50px;
+  /* margin: 6% 6% 0% 6%; */
+  /* width: 50px;
     height: 50px; */
-    /* max-height: 10%; */
-    /* text-align: center; */
-    /* display: inline-block;
+  /* max-height: 10%; */
+  /* text-align: center; */
+  /* display: inline-block;
     border-radius: 10px 10px; */
-    /* box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);  */
-    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+  /* box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);  */
+  /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
 }
 @media only screen and (max-width: 1000px) {
-    .logo {
-        margin: 5% 5% 0% 5%;
-        width: 80px;
-        border-radius: 10px 10px;
-    }
-    .logInLogo {
-        margin: 5% 5% 0% 5%;
-        width: 80px;
-        border-radius: 10px 10px;
-    }
+  .logo {
+    margin: 5% 5% 0% 5%;
+    width: 80px;
+    border-radius: 10px 10px;
+  }
+  .logInLogo {
+    margin: 5% 5% 0% 5%;
+    width: 80px;
+    border-radius: 10px 10px;
+  }
 }
 @media only screen and (min-width: 1000px) {
-    .logo{
-        position: fixed;
-        left: 0;
-        margin: 0% 4% 1% 6%;
-        /* margin: 6% 6% 0% 6%; */
-        width: 50px;
-        height: 50px;
-        /* max-height: 10%; */
-        /* text-align: center; */
-        display: inline-block;
-        border-radius: 10px 10px;
-        /* box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);  */
-        /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
-    }
-    .logInLogo {
-        position: fixed;
-        left: 0;
-        top: 0;
-        margin: 5% 5.5%;
-        /* left: 6%;
+  .logo {
+    position: fixed;
+    left: 0;
+    margin: 0% 4% 1% 6%;
+    /* margin: 6% 6% 0% 6%; */
+    width: 50px;
+    height: 50px;
+    /* max-height: 10%; */
+    /* text-align: center; */
+    display: inline-block;
+    border-radius: 10px 10px;
+    /* box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);  */
+    /* The above box-shadow code came from https://gist.github.com/gertig/3441369 to replicate the effect of mac osx window shadow */
+  }
+  .logInLogo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 5% 5.5%;
+    /* left: 6%;
         top: 15.5%; */
-        /* margin: 6% 6% 0% 6%; */
-        width: 50px;
-        height: 50px;
-        /* max-height: 10%; */
-        /* text-align: center; */
-        display: inline-block;
-        border-radius: 10px 10px;
-    }
+    /* margin: 6% 6% 0% 6%; */
+    width: 50px;
+    height: 50px;
+    /* max-height: 10%; */
+    /* text-align: center; */
+    display: inline-block;
+    border-radius: 10px 10px;
+  }
 }
 
-
 .logInLogo {
-    /* left: 0;
+  /* left: 0;
     top: 0;
     margin: 5% 5.5%;
     /* left: 6%;
     top: 15.5%; */
-    /* margin: 6% 6% 0% 6%; */
-    /* width: 50px;
+  /* margin: 6% 6% 0% 6%; */
+  /* width: 50px;
     height: 50px;
     /* max-height: 10%; */
-    /* text-align: center; */
-    /* display: inline-block;
+  /* text-align: center; */
+  /* display: inline-block;
     border-radius: 10px 10px;   */
 }
 
 .showButtons {
-    background: white;
-    color: black; 
-    border-radius: 2px;
+  background: white;
+  color: black;
+  border-radius: 2px;
 }
 
 .showButtons:hover {
-    color: blue;
-    text-decoration: underline;
+  color: blue;
+  text-decoration: underline;
 }
 
-.logInButton, .logInHeading {
-    margin: 1%;
+.logInButton,
+.logInHeading {
+  margin: 1%;
+}
+
+.inputBox {
+  width: 130px;
 }

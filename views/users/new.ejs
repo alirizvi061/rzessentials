@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/header.ejs') %>
     <%- include('../partials/menu.ejs') %>
     <title>Sign Up</title>
 </head>
+
 <body>
     <header>
-        <img class = 'logInLogo' type = 'text/css' src = "/assets/logo_transparent.jpg" alt = "R and Z Essentials logo"/>
+        <img class='logInLogo' type='text/css' src="/assets/logo_transparent.jpg" alt="R and Z Essentials logo" />
     </header>
-    <div class = 'headerText'>
+    <div class='headerText'>
         <h2>Welcome to the Home of Content Creation!</h2>
     </div>
     <div class='userContainer'>
-        <h1 class = "logInHeading">Sign Up</h1>
+        <h1 class="logInHeading">Sign Up</h1>
         <form action="/users" method="POST">
             <div>
-                <input required type="text" placeholder = "Username" name="username"/>
+                <input required type="text" placeholder="Username" name="username" class="inputBox" />
             </div>
             <div>
-                 <input required type="password" placeholder = "Password" name="password"/>
+                <input required type="password" placeholder="Password" name="password" class="inputBox" />
             </div>
-            <input class = "logInButton" type="submit" value="Sign up"/>
+            <input class="logInButton" type="submit" value="Sign up" />
         </form>
     </div>
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
 </body>
+
 </html>
 
 <!-- Idea for the log in page was emulated using the notes from the class -->

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/header.ejs') %>
     <%- include('../partials/menu.ejs') %>
     <title>Log In</title>
 </head>
+
 <body>
     <header>
-        <img class = 'logInLogo' type = 'text/css' src = "/assets/logo_transparent.jpg" alt = "R and Z Essentials logo"/>
+        <img class='logInLogo' type='text/css' src="/assets/logo_transparent.jpg" alt="R and Z Essentials logo" />
     </header>
-    <div class = 'headerText'>
+    <div class='headerText'>
         <h2>Welcome to the Home of Content Creation!</h2>
     </div>
 
@@ -17,19 +19,19 @@
         <h1>Log In</h1>
         <form action="/sessions" method="POST">
             <div>
-                <input required type="text" placeholder = "Username" name="username"/>
+                <input required type="text" placeholder="Username" name="username" class="inputBox" />
             </div>
             <div>
-                 <input required type="password" placeholder = "Password" name="password"/>
+                <input required type="password" placeholder="Password" name="password" class="inputBox" />
             </div>
-            <input class = "logInButton" type="submit" value="Log In"/>
+            <input class="logInButton" type="submit" value="Log In" />
         </form>
-        <p>Not a member? <a href = '/users/new/'> sign up</a></p>
+        <p>Not a member? <a href='/users/new/'> sign up</a></p>
     </div>
 </body>
-    <footer>
-        <%- include('../partials/footer.ejs') %>
-    </footer>
+<footer>
+    <%- include('../partials/footer.ejs') %>
+</footer>
 
 </html>
 
